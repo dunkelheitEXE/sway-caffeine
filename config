@@ -210,7 +210,16 @@ bindsym $mod+r mode "resize"
     bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
     bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
     # Special key to take a screenshot with grim
-    bindsym Print exec grim
+
+# dunkelheitEXE config for screenshots
+# configuracion para capturas de pantalla
+# -------------------------------------
+
+    bindsym Print exec grimshot save area
+    bindsym Shift+Print exec grimshot copy area
+
+# -----------------------
+# fin configuracion dunkelheitEXE
 
 #
 # Status Bar:
@@ -276,6 +285,11 @@ input "type:touchpad" {
   tap enabled
   dwt enabled
 }
+
+# Notifications / Notificaciones
+
+exec dunst
+
 
 ### Fin de configuraciones hechas por dunkelheitEXE
 
